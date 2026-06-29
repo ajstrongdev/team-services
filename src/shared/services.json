@@ -1,0 +1,114 @@
+{
+  "services": [
+    {
+      "id": "taiga",
+      "name": "Taiga",
+      "tag": "Scrum board",
+      "description": "Sprint planning, backlog grooming, and issue tracking.",
+      "url": "https://issues.rhinolinux.org",
+      "accent": "#9235ff",
+      "icon": "SquareKanban",
+      "category": "Team Services"
+    },
+    {
+      "id": "mattermost",
+      "name": "Mattermost",
+      "tag": "Team chat",
+      "description": "Project channels, coordination, and release discussion.",
+      "url": "https://mattermost.rhinolinux.org",
+      "accent": "#c10080",
+      "icon": "MessageCircle",
+      "category": "Team Services"
+    },
+    {
+      "id": "Jitsi",
+      "name": "Jitsi Meet",
+      "tag": "Meetings",
+      "description": "Quick calls, standups, and screen sharing.",
+      "url": "https://meet.jit.si",
+      "accent": "#d404ff",
+      "icon": "Video",
+      "category": "Team Services"
+    },
+    {
+      "id": "calendar",
+      "name": "Calendar",
+      "tag": "Schedule",
+      "description": "Release dates, recurring calls, and shared milestones.",
+      "url": "https://calendar.rhinolinux.org",
+      "accent": "#8d7be4",
+      "icon": "CalendarDays",
+      "category": "Team Services"
+    },
+    {
+      "id": "cryptpad",
+      "name": "CryptPad",
+      "tag": "Encrypted docs",
+      "description": "Private notes, release drafts, and collaborative writing.",
+      "url": "https://cryptpad.rhinolinux.org",
+      "accent": "#7a8aa0",
+      "icon": "FileLock2",
+      "category": "Team Services"
+    },
+    {
+      "id": "email",
+      "name": "Email",
+      "tag": "Webmail",
+      "description": "Team email access for Rhino Linux contributors.",
+      "url": "https://email.rhinolinux.org",
+      "accent": "#4f9cff",
+      "icon": "Mail",
+      "category": "Team Services"
+    },
+    {
+      "id": "rhino-website",
+      "name": "Rhino Linux",
+      "tag": "Website",
+      "description": "The official website for the Rhino Linux project.",
+      "url": "https://rhinolinux.org",
+      "accent": "#9235ff",
+      "icon": "Globe",
+      "category": "Misc"
+    },
+    {
+      "id": "rhino-blog",
+      "name": "Rhino Blog",
+      "tag": "News",
+      "description": "Release announcements, updates, and project news.",
+      "url": "https://blog.rhinolinux.org",
+      "accent": "#c10080",
+      "icon": "Newspaper",
+      "category": "Misc"
+    },
+    {
+      "id": "rhino-wiki",
+      "name": "Rhino Wiki",
+      "tag": "Docs",
+      "description": "Guides, documentation, and how-tos for Rhino Linux.",
+      "url": "https://wiki.rhinolinux.org",
+      "accent": "#8d7be4",
+      "icon": "BookOpen",
+      "category": "Misc"
+    },
+    {
+      "id": "rhino-forums",
+      "name": "Forums",
+      "tag": "Community",
+      "description": "Community discussion and support forums.",
+      "url": "https://forums.rhinolinux.org",
+      "accent": "#d404ff",
+      "icon": "MessagesSquare",
+      "category": "Misc"
+    },
+    {
+      "id": "cloudron",
+      "name": "Cloudron",
+      "tag": "Admin",
+      "description": "Cloudron dashboard for Rhino Linux services.",
+      "url": "https://my.rhinolinux.org",
+      "accent": "#7a8aa0",
+      "icon": "Cloud",
+      "category": "Misc"
+    }
+  ]
+}

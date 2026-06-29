@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en" class="bg-[#19142d]">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'self'"
+    />
+    <title>Rhino Team Services</title>
+    <link rel="stylesheet" href="./styles/output.css" />
+  </head>
+  <body class="h-dvh overflow-hidden bg-[#19142d] text-slate-100 antialiased">
+    <div id="app-shell" class="app-shell h-dvh w-full">
+      <aside class="sidebar flex min-h-0 flex-col border-r border-white/10 bg-[#13093c]">
+        <div class="sidebar-header drag-region flex items-center gap-3 px-5 pb-5">
+          <img src="./assets/logo.png" alt="" class="size-10 shrink-0 rounded-xl object-contain" />
+          <span class="sidebar-collapsible no-drag leading-tight">
+            <span class="block text-sm font-semibold">Rhino Linux</span>
+            <span class="block text-xs text-slate-400">Team services</span>
+          </span>
+        </div>
+
+        <nav id="service-nav" class="flex-1 space-y-1 overflow-y-auto px-3 pb-4" aria-label="Team services">
+        </nav>
+
+        <div class="sidebar-collapsible border-t border-white/10 px-5 py-3 text-[11px] text-slate-500">
+          <kbd class="rounded bg-white/10 px-1 text-slate-300">⌘/Ctrl 1–8</kbd> switch ·
+          <kbd class="rounded bg-white/10 px-1 text-slate-300">⌘/Ctrl-click</kbd> new tab ·
+          <kbd class="rounded bg-white/10 px-1 text-slate-300">⌘/Ctrl W</kbd> close ·
+          <kbd class="rounded bg-white/10 px-1 text-slate-300">Ctrl ⇥</kbd> cycle
+        </div>
+      </aside>
+
+      <section class="relative flex min-h-0 flex-col bg-[#19142d]">
+        <header class="toolbar drag-region flex items-center gap-3 border-b border-white/10 bg-[#1d1733] px-4 py-2.5">
+          <div class="no-drag flex items-center gap-1">
+            <button id="toggle-sidebar" class="toolbar-btn" title="Toggle sidebar (⌘/Ctrl B)" aria-label="Toggle sidebar"></button>
+            <button id="nav-back" class="toolbar-btn" title="Back" aria-label="Back"></button>
+            <button id="nav-forward" class="toolbar-btn" title="Forward" aria-label="Forward"></button>
+            <button id="nav-reload" class="toolbar-btn" title="Reload" aria-label="Reload"></button>
+          </div>
+
+          <div class="no-drag flex min-w-0 items-center gap-2">
+            <span id="active-icon" class="hidden size-7 shrink-0 items-center justify-center rounded-md ring-1"></span>
+            <div class="min-w-0">
+              <p id="active-title" class="truncate text-sm font-semibold text-white">Rhino Team Services</p>
+              <p id="active-url" class="truncate text-[11px] text-slate-400">Select a service from the sidebar</p>
+            </div>
+          </div>
+
+          <div class="no-drag ml-auto flex items-center gap-1">
+            <button id="nav-external" class="toolbar-btn" title="Open in browser" aria-label="Open in browser"></button>
+          </div>
+        </header>
+
+        <div id="tab-strip" class="tab-strip is-empty" role="tablist" aria-label="Open tabs">
+        </div>
+
+        <div id="loading-bar" class="loading-bar"></div>
+
+        <div id="view-container" class="relative min-h-0 flex-1">
+          <div id="welcome" class="welcome absolute inset-0 flex flex-col items-center justify-center gap-5 px-6 text-center">
+            <img src="./assets/logo.png" alt="" class="size-20 rounded-3xl object-contain shadow-2xl shadow-[#9235ff]/20" />
+            <div>
+              <h1 class="text-2xl font-bold text-white">Welcome to Rhino Team Services</h1>
+              <p class="mt-2 max-w-md text-sm leading-6 text-slate-300">
+                Pick a tool from the sidebar to open it right here. Your sessions stay
+                signed in between launches.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <script type="module" src="./renderer.js"></script>
+  </body>
+</html>

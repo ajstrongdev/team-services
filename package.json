@@ -1,0 +1,76 @@
+{
+  "name": "rhino-team-services",
+  "version": "0.1.0",
+  "description": "Rhino Linux team services desktop app — embeds Taiga, Mattermost, MiroTalk, Calendar and CryptPad in one window.",
+  "author": "Rhino Linux <packages@rhinolinux.org>",
+  "homepage": "https://rhinolinux.org",
+  "license": "MIT",
+  "private": true,
+  "main": "dist/main/main.js",
+  "scripts": {
+    "icons": "electron scripts/generate-icons.mjs",
+    "build:css": "tailwindcss -i ./src/renderer/styles/input.css -o ./dist/renderer/styles/output.css",
+    "build:app": "node scripts/build.mjs",
+    "build": "bun run build:app && bun run build:css",
+    "watch": "node scripts/build.mjs --watch",
+    "start": "electron .",
+    "dev": "bun run build && electron .",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint . && prettier --check \"src/**/*.{ts,css}\" \"tests/**/*.ts\"",
+    "format": "prettier --write \"src/**/*.{ts,css}\" \"tests/**/*.ts\"",
+    "test": "vitest run",
+    "dist": "bun run build && electron-builder",
+    "dist:mac": "bun run build && electron-builder --mac",
+    "dist:linux": "bun run build && electron-builder --linux"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@tailwindcss/cli": "^4.3.1",
+    "@types/node": "^26.0.1",
+    "electron": "^31.0.0",
+    "electron-builder": "^24.13.3",
+    "esbuild": "^0.25.0",
+    "eslint": "^10.6.0",
+    "eslint-config-prettier": "^10.1.8",
+    "lucide": "^0.469.0",
+    "prettier": "^3.8.5",
+    "tailwindcss": "^4.3.1",
+    "typescript": "^5.6.0",
+    "typescript-eslint": "^8.62.0",
+    "vitest": "^4.1.9"
+  },
+  "build": {
+    "appId": "org.rhinolinux.teamservices",
+    "productName": "Rhino Team Services",
+    "directories": {
+      "output": "release",
+      "buildResources": "build"
+    },
+    "files": [
+      "dist/**/*",
+      "package.json"
+    ],
+    "mac": {
+      "category": "public.app-category.developer-tools",
+      "icon": "build/icon.icns",
+      "target": [
+        "dmg",
+        "zip"
+      ]
+    },
+    "linux": {
+      "category": "Development",
+      "icon": "build/icon.png",
+      "maintainer": "Rhino Linux <packages@rhinolinux.org>",
+      "target": [
+        {
+          "target": "deb",
+          "arch": [
+            "x64",
+            "arm64"
+          ]
+        }
+      ]
+    }
+  }
+}
